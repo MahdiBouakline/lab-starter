@@ -26,7 +26,7 @@ steps:
 # Step 1: EDIT HERE - INTERNAL COMMENT DESCRIBING STEP 
 - title: Create a task list
   description: A task list creates checkboxes for people with access in a repository to check off.
-  event: Add a comment to this issue, using Markdown to create a list of items to complete. Your task can include any tasks you wish, or you can use this example
+  event: Add a comment to this issue, using Markdown to create a list of items to complete. Your task can include any tasks you wish, or you can use this example(comment below)
   actions: Comment will be posted
   - type: reopenIssue
 
