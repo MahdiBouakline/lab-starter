@@ -33,7 +33,7 @@ steps:
 # Step 2: EDIT HERE -INTERNAL COMMENT FOR STEP 2
  - title: Turn on GitHub Pages
   description: Now let's turn our focus to the content of your portfolio. Because this portfolio will display as a static web page, you'll need to enable GitHub Pages.
-  event: In the GitHub Pages section, use the Select source drop-down menu to select master as your GitHub Pages publishing source.
+  event: In the GitHub Pages section, use the Select source drop-down menu to select master as your GitHub Pages publishing source. (Go to settings, scroll to pages and select master)
   actions: Page will be published
   - type: enablePages
 
@@ -43,7 +43,7 @@ steps:
   event: In this pull request, click the Files changed tab.
 In the upper right corner of the file view, click the small pencil ✏️ icon for the file titled _includes/01-name.md.
 On the Edit file tab, add a "#" before the content to make it an H1 Header. You can add more headers, using one to six "#" characters.
-Above your new content, click Preview changes.
+Above your new content, click Preview changes.(Click files changed tab and edit)
 At the bottom of the page, type a short, meaningful commit message that describes the change you made to the file.
 Click Commit changes.
   actions: Header will be added
@@ -54,14 +54,14 @@ Click Commit changes.
   description: In this pull request, you'll learn about lists and emoji. You'll also list a few details in your resume.
   event: Edit the _includes/04-lists.md in this pull request.
 Create a markdown list in the file. It can be ordered or unordered.
-Commit your changes.
+Commit your changes.(Click pull request, click the edit button and use previous knowledge to design a list)
   actions: List will be created
   - type: htmlContainsTag
 
 # Step 5: EDIT HERE - INTERNAL COMMENT FOR STEP 5
  - title: Use emphasis
   description: Nice list! You can merge this pull request when you're ready.
-  event: Click Merge pull request below.
+  event: Click Merge pull request below. 
   actions: Branches will be merged
   - type: mergeBranch
 
