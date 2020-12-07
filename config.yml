@@ -7,8 +7,8 @@ description: # a longer description for your Learning Lab course, displayed on t
 # This will be used when the repository is crated for each individual learner
 
 template:
-  name: # the name of the repository when it is created for the learner
-  repo: # the name of the template repository from which to clone for the learner
+  name:    User
+  repo:     Test1
 
 # `before` block
 # Actions to take place after the learner registers, but before they start interacting with their repo
@@ -23,38 +23,45 @@ before:
 # Create one step for each action that a learner will complete
 
 steps:
-# Step 1: INTERNAL COMMENT DESCRIBING STEP 
-- title: # the title of the step, shown to the learner in the course progress page
-  description: # a description of the step, shown to the learner in the course progress page
-  event: # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
-  actions: # a list of the actions that will occur when the step is triggered by an event
-  - type: # the type of action, full list at https://lab.github.com/docs/actions
+# Step 1: EDIT HERE - INTERNAL COMMENT DESCRIBING STEP 
+- title: Create a task list
+  description: A task list creates checkboxes for people with access in a repository to check off.
+  event: Add a comment to this issue, using Markdown to create a list of items to complete. Your task can include any tasks you wish, or you can use this example
+  actions: Comment will be posted
+  - type: reopenIssue
 
-# Step 2: INTERNAL COMMENT FOR STEP 2
-# - title: # the title of the step, shown to the learner in the course progress page
-#  description: # a description of the step, shown to the learner in the course progress page
-#  event: # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
-#  actions: # a list of the actions that will occur when the step is triggered by an event
-#  - type: # the type of action, full list at https://lab.github.com/docs/actions
+# Step 2: EDIT HERE -INTERNAL COMMENT FOR STEP 2
+ - title: Turn on GitHub Pages
+  description: Now let's turn our focus to the content of your portfolio. Because this portfolio will display as a static web page, you'll need to enable GitHub Pages.
+  event: In the GitHub Pages section, use the Select source drop-down menu to select master as your GitHub Pages publishing source.
+  actions: Page will be published
+  - type: enablePages
 
-# Step 3: INTERNAL COMMENT FOR STEP 3
-# - title: # the title of the step, shown to the learner in the course progress page
-#  description: # a description of the step, shown to the learner in the course progress page
-#  event: # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
-#  actions: # a list of the actions that will occur when the step is triggered by an event
-#  - type: # the type of action, full list at https://lab.github.com/docs/actions
+# Step 3: EDIT HERE - INTERNAL COMMENT FOR STEP 3
+ - title: Add headers
+  description: As you saw on your website, your portfolio doesn't have much content yet. We'll learn how to edit the file in this pull request to incorporate some Markdown headers.
+  event: In this pull request, click the Files changed tab.
+In the upper right corner of the file view, click the small pencil ✏️ icon for the file titled _includes/01-name.md.
+On the Edit file tab, add a "#" before the content to make it an H1 Header. You can add more headers, using one to six "#" characters.
+Above your new content, click Preview changes.
+At the bottom of the page, type a short, meaningful commit message that describes the change you made to the file.
+Click Commit changes.
+  actions: Header will be added
+  - type: htmlContainsTag
 
-# Step 4: INTERNAL COMMENT FOR STEP 4
-# - title: # the title of the step, shown to the learner in the course progress page
-#  description: # a description of the step, shown to the learner in the course progress page
-#  event: # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
-#  actions: # a list of the actions that will occur when the step is triggered by an event
-#  - type: # the type of action, full list at https://lab.github.com/docs/actions
+# Step 4: EDIT HERE - INTERNAL COMMENT FOR STEP 4
+ - title: Add a list
+  description: In this pull request, you'll learn about lists and emoji. You'll also list a few details in your resume.
+  event: Edit the _includes/04-lists.md in this pull request.
+Create a markdown list in the file. It can be ordered or unordered.
+Commit your changes.
+  actions: List will be created
+  - type: htmlContainsTag
 
-# Step 5: INTERNAL COMMENT FOR STEP 5
-# - title: # the title of the step, shown to the learner in the course progress page
-#  description: # a description of the step, shown to the learner in the course progress page
-#  event: # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
-#  actions: # a list of the actions that will occur when the step is triggered by an event
-#  - type: # the type of action, full list at https://lab.github.com/docs/actions
+# Step 5: EDIT HERE - INTERNAL COMMENT FOR STEP 5
+ - title: Use emphasis
+  description: Nice list! You can merge this pull request when you're ready.
+  event: Click Merge pull request below.
+  actions: Branches will be merged
+  - type: mergeBranch
 
